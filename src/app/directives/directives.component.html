@@ -18,13 +18,23 @@
 
 <!--<p [class.blue]="backgroundToggle">Lorem</p>-->
 
-<!-- Structure directives-->
+<!-- Structure directives: *ngIf else-->
 
-<button (click)="toggleForStructureDirective = !toggleForStructureDirective"></button>
-<div *ngIf="toggleForStructureDirective; else blueParagraph" class="directives reds">Red</div>
+<!--<button (click)="toggleForStructureDirective = !toggleForStructureDirective"></button>-->
+<!--<div *ngIf="toggleForStructureDirective; else blueParagraph" class="directives reds">Red</div>-->
 
-<ng-template #blueParagraph>
-  <p class="blue">NICEEEE</p>
-</ng-template>
+<!--<ng-template #blueParagraph>-->
+<!--  <p class="blue">NICEEEE</p>-->
+<!--</ng-template>-->
 
 
+
+<!-- Structure directives: *ngSwitch-->
+
+<button (click)="switch = !switch">Switch</button>
+
+<div class="switch" [ngSwitch]="switch">
+  <p *ngSwitchCase="true" class="red">RED</p>
+  <p *ngSwitchCase="false" class=blue>Blue</p>
+  <p *ngSwitchDefault>DEFAULT</p>
+</div>

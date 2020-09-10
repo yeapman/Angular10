@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DirectivesComponent implements OnInit {
   backgroundToggle: boolean = true;
   toggleForStructureDirective: boolean = true;
-
+  switch: boolean;
   constructor() { }
 
   ngOnInit(): void {
