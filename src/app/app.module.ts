@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { InterpolationComponent } from './interpolation/interpolation.component';
+import { BindingComponent } from './binding/binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InterpolationComponent
+    InterpolationComponent,
+    BindingComponent
   ],
   imports: [
     BrowserModule
