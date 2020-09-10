@@ -1,3 +1,10 @@
 <p>binding works!</p>
 
-<img src="{{img}}" alt="">
+<!--<img src="{{img}}" alt="">-->
+
+
+<!-- One way binding -->
+
+<input type="text" (input)="methodForCall($event)">
+
+<p><strong>{{inputValue}}</strong></p>
