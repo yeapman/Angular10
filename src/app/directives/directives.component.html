@@ -1,0 +1,30 @@
+<p>ng-style works!</p>
+
+<!--<button (click)="backgroundToggle= !backgroundToggle">Toggle with ngStyle</button>-->
+
+<!--<div [ngStyle]="{-->
+<!--  width: '200px',-->
+<!--  height: '200px',-->
+<!--  borderRadius: '5px',-->
+<!--  border: '1px solid #ccc',-->
+<!--  background: backgroundToggle ? 'red' : 'blue'-->
+<!--   }">-->
+<!--</div>-->
+
+<!--<p [ngClass]="{-->
+<!--red: backgroundToggle,-->
+<!--blue: !backgroundToggle-->
+<!--}">Hello bro</p>-->
+
+<!--<p [class.blue]="backgroundToggle">Lorem</p>-->
+
+<!-- Structure directives-->
+
+<button (click)="toggleForStructureDirective = !toggleForStructureDirective"></button>
+<div *ngIf="toggleForStructureDirective; else blueParagraph" class="directives reds">Red</div>
+
+<ng-template #blueParagraph>
+  <p class="blue">NICEEEE</p>
+</ng-template>
+
+
