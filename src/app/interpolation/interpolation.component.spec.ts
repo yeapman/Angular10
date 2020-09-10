@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Post2Component } from './post2.component';
+import { InterpolationComponent } from './interpolation.component';
 
-describe('Post2Component', () => {
-  let component: Post2Component;
-  let fixture: ComponentFixture<Post2Component>;
+describe('InterpolationComponent', () => {
+  let component: InterpolationComponent;
+  let fixture: ComponentFixture<InterpolationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Post2Component ]
+      declarations: [ InterpolationComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Post2Component);
+    fixture = TestBed.createComponent(InterpolationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
