@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InterpolationComponent implements OnInit {
   title = 'Dynamic title'
-
+  obj = {a:1, b: {c: 2}}
   constructor() { }
 
   ngOnInit(): void {
