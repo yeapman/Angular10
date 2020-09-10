@@ -31,10 +31,38 @@
 
 <!-- Structure directives: *ngSwitch-->
 
-<button (click)="switch = !switch">Switch</button>
+<!--<button (click)="switch = !switch">Switch</button>-->
 
-<div class="switch" [ngSwitch]="switch">
-  <p *ngSwitchCase="true" class="red">RED</p>
-  <p *ngSwitchCase="false" class=blue>Blue</p>
-  <p *ngSwitchDefault>DEFAULT</p>
-</div>
+<!--<div class="switch" [ngSwitch]="switch">-->
+<!--  <p *ngSwitchCase="true" class="red">RED</p>-->
+<!--  <p *ngSwitchCase="false" class=blue>Blue</p>-->
+<!--  <p *ngSwitchDefault>DEFAULT</p>-->
+<!--</div>-->
+
+
+<!-- Structure directives: *ngFor-->
+
+<!--<h1>*ngFor</h1>-->
+
+<!--<ul>-->
+<!--  <li *ngFor="let n of arr; let idx = index">-->
+<!--   {{idx}} {{n}}-->
+<!--  </li>-->
+<!--</ul>-->
+
+
+<ul>
+  <li *ngFor="let post of hardArrWithObjects">
+    <p>{{post.title}} <b>{{post.author}}</b></p>
+    <ul>
+      <li *ngFor="let comment of post.comments">
+        <div>
+          <small>
+            {{comment.name}}
+          </small>
+          <p>{{comment.text}}</p>
+        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
