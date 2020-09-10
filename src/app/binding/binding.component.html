@@ -1,13 +1,15 @@
-<p>binding works!</p>
+<!-- 1. its simple two way binding -->
 
-<!--<img src="{{img}}" alt="">-->
+<h1>Two way data binging</h1>
 
+<input type="text" [value]="text" (input)="onInput($event)">
 
-<!-- One way binding -->
-
-<input type="text" (input)="methodForCall($event)">
-
-<p><strong>{{inputValue}}</strong></p>
+<p>{{text}}</p>
 
 
-<input type="text" (keyup.enter)="onInput($event)">
+<!-- 2. Angular two way binding -->
+
+
+<input type="text" [(ngModel)]="text">
+
+<p>{{text}}</p>
