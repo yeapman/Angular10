@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { InterpolationComponent } from './interpolation/interpolation.component';
 import { BindingComponent } from './binding/binding.component';
 import {FormsModule} from '@angular/forms';
+import { NgStyleComponent } from './ng-style/ng-style.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InterpolationComponent,
-    BindingComponent
+    BindingComponent,
+    NgStyleComponent
   ],
   imports: [
     BrowserModule,
