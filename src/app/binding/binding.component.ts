@@ -18,7 +18,10 @@ export class BindingComponent implements OnInit {
 
   methodForCall(event?) {
     this.inputValue = event.target.value
-    console.log('event', event)
+  }
+
+  onInput(event?) {
+    console.log(event)
   }
 
 }
