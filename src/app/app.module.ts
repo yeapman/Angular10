@@ -8,6 +8,7 @@ import {FormsModule} from '@angular/forms';
 import {DirectivesComponent} from './directives/directives.component';
 import { JsComponent } from './js/js.component';
 import { ComponentFormComponent } from './component-form/component-form.component';
+import { NewPostsComponent } from './new-posts/new-posts.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ComponentFormComponent } from './component-form/component-form.componen
     BindingComponent,
     DirectivesComponent,
     JsComponent,
-    ComponentFormComponent
+    ComponentFormComponent,
+    NewPostsComponent
   ],
   imports: [
     BrowserModule,
