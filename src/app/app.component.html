@@ -2,3 +2,22 @@
   <p appStyle="red" fontWeight="bold">Lorem lalala</p>
 
 </div>
+
+<!-- Structural directive-->
+
+<div class="structural" *ngIf="isVisible">
+
+  <div class="my">
+    <p>lalallala</p>
+  </div>
+
+</div>
+
+<!-- The same as -->
+<ng-template  [ngIf]="isVisible">
+  <div class="structural">
+    <div class="my">
+      <p>lalallala</p>
+    </div>
+  </div>
+</ng-template>
