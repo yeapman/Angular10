@@ -1,10 +1,11 @@
-import {Directive, ElementRef, HostListener, Renderer2} from '@angular/core';
+import {Directive, ElementRef, HostListener, Input, Renderer2} from '@angular/core';
 
 @Directive({
   selector: '[appStyle]'
 })
 export class StyleDirective {
-
+  @Input('appStyle') color: string = 'blue';
+  @Input() fontWeight: string = 'normal';
   constructor(private el: ElementRef, private r: Renderer2) {
     el.nativeElement.style.color = 'red'; // bad use, not optimise
 
@@ -16,7 +17,7 @@ export class StyleDirective {
   }
 
   @HostListener('mouseenter') onMyEnter() {
-    this.r.setStyle(this.el.nativeElement, 'color', 'red');
+    this.r.setStyle(this.el.nativeElement, 'color', this.color);
   }
 
   @HostListener('mouseleave') onLeave() {
