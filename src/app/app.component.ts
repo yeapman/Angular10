@@ -4,7 +4,8 @@ import {AppCounterService} from './services/app-counter.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [AppCounterService]
 })
 export class AppComponent implements OnInit {
 
