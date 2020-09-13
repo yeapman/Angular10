@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
 
   submit() {
     console.log(this.form.value)
+    this.form.reset();
   }
 
   setCapital() {
@@ -43,6 +44,7 @@ export class AppComponent implements OnInit {
       adress: {city}
       }
     )
+
   }
 
   addSkill() {
