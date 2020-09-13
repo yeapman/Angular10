@@ -1,11 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-
-export interface PostInterface {
-  title: string
-  text: string
-  id?: number
-}
-
+import {AppCounterService} from './services/app-counter.service';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +7,11 @@ export interface PostInterface {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  isVisible: boolean = true;
 
   ngOnInit(): void {
   }
+
+  constructor(private appService: AppCounterService) {
+  }
+
 }
