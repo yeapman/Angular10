@@ -14,10 +14,25 @@
     </div>
 
 
+      <div class="card" formGroupName="adress">
+        <h1>Adress</h1>
+
+        <div class="form-control">
+          <select formControlName="country">
+            <option value="ru">Russia</option>
+            <option value="ua">Ukraine</option>
+            <option value="by">Belarus</option>
+          </select>
+        </div>
+
+        <input type="text" formControlName="city">
+      </div>
+
 
     <input type="text" placeholder="Password" formControlName="password">
 
     <button type="button">nice</button>
+
 
     <button type="submit" [disabled]="form.invalid">Submit</button>
   </form>
