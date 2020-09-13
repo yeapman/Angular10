@@ -4,12 +4,14 @@ import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import {StyleDirective} from './directives/style.directive';
 import { Style2Directive } from './directives/style2.directive';
+import { OwnDirectiveDirective } from './directives/own-directive.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     StyleDirective,
-    Style2Directive
+    Style2Directive,
+    OwnDirectiveDirective
   ],
   imports: [
     BrowserModule,
