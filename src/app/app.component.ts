@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 export interface PostInterface {
   title: string
@@ -12,16 +12,11 @@ export interface PostInterface {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  posts: PostInterface[] = [
-    {title: 'Want learn angular components', text: 'still learn components', id: 1},
-    {title: ' LALA', text: 'lll', id: 2}
-  ];
+export class AppComponent implements OnInit{
+  ngOnInit(): void {
+    setTimeout(() => {
+      console.log('TimeOut');
 
-  title = 'ChooseOne';
-
-  updateMyPost(postUpdated: PostInterface) {
-    this.posts.unshift(postUpdated);
+    }, 5000);
   }
-
 }
