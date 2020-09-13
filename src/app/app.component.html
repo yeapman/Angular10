@@ -25,13 +25,13 @@
           </select>
         </div>
 
-        <input type="text" formControlName="city">
+        <input type="text" formControlName="city" >
       </div>
 
 
     <input type="text" placeholder="Password" formControlName="password">
 
-    <button type="button">nice</button>
+    <button type="button" (click)="setCapital()">choose capital</button>
 
 
     <button type="submit" [disabled]="form.invalid">Submit</button>
