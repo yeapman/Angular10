@@ -9,7 +9,7 @@ import {AppCounterService} from '../services/app-counter.service';
 })
 export class Counter2Component implements OnInit {
   constructor(private appe2: AppCounterService) { }
-  
+
   ngOnInit(): void {
   }
 
