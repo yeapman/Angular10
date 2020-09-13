@@ -14,9 +14,5 @@ export interface PostInterface {
 })
 export class AppComponent implements OnInit{
   ngOnInit(): void {
-    setTimeout(() => {
-      console.log('TimeOut');
-
-    }, 5000);
   }
 }

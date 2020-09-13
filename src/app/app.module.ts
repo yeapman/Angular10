@@ -2,14 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
-import { ChangeDetectionStrategyComponent } from './change-detection-strategy/change-detection-strategy.component';
-import { CheckParallelViewStylesComponent } from './check-parallel-view-styles/check-parallel-view-styles.component';
+import {StyleDirective} from './directives/style.directive';
+import { Style2Directive } from './directives/style2.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChangeDetectionStrategyComponent,
-    CheckParallelViewStylesComponent
+    StyleDirective,
+    Style2Directive
   ],
   imports: [
     BrowserModule,
