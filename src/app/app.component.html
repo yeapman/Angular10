@@ -1,25 +1,12 @@
-<div class="services">
-  <h1>Angular Services</h1>
+<div class="myForm">
 
-  <div class="card">
-    <h2>App Counter: {{ appService.counter }}</h2>
+  <form action="" [formGroup]="form" (ngSubmit)="submit()">
 
-    <button (click)="appService.increase()">+</button>
-    <button (click)="appService.decrease()">-</button>
-  </div>
+    <input type="text" placeholder="Email" formControlName="email">
+    <input type="text" placeholder="Password" formControlName="password">
+
+    <button type="button">nice</button>
+
+    <button type="submit" [disabled]="form.invalid">Submit</button>
+  </form>
 </div>
-
-
-
-
-<app-counter></app-counter>
-
-
-
-
-
-<h1>Private scope service via providers:</h1>
-<app-counter2></app-counter2>
-
-
-<app-use-another-service></app-use-another-service>

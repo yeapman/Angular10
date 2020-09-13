@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {AppCounterService} from './services/app-counter.service';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +7,20 @@ import {AppCounterService} from './services/app-counter.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+  form: FormGroup;
 
   ngOnInit(): void {
+    this.form = new FormGroup({
+      email: new FormControl('', [Validators.email, Validators.required]),
+      password: new FormControl(null, [Validators.required, Validators.minLength(6)])
+    })
   }
 
-  constructor(private appService: AppCounterService) {
+  constructor() {
+  }
+
+  submit() {
+    console.log(this.form.value)
   }
 
 }
