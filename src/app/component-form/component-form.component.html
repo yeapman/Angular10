@@ -1,3 +1,8 @@
 <p>component-form works!</p>
 
-<div class="posts" *ngFor="let Posts of posts">{{Posts.text}}</div>
+<input type="text" [(ngModel)]="title">
+
+
+<input type="text" [(ngModel)]="text">
+
+<button class="addPost" (click)="addPost()">Add post</button>

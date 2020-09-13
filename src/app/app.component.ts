@@ -19,4 +19,9 @@ export class AppComponent {
   ];
 
   title = 'ChooseOne';
+
+  updateMyPost(postUpdated: PostInterface) {
+    this.posts.unshift(postUpdated);
+  }
+
 }
