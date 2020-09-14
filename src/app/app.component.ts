@@ -15,12 +15,10 @@ export interface Todo {
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-
   todos: Todo[] = [];
-
   loading: boolean = false;
-
   toDoTitle = '';
+  error = '';
 
   constructor(private http: HttpClient, private service: TodoService) {
   }
@@ -35,7 +33,6 @@ export class AppComponent implements OnInit {
     this.http.get<Todo[]>('https://jsonplaceholder.typicode.com/todos?_limit=2')
       .pipe(delay(1500))
       .subscribe(data =>  {
-        console.log(data);
         this.todos = data;
         this.loading = false;
       })
@@ -55,6 +52,8 @@ export class AppComponent implements OnInit {
       completed: false
     }).subscribe(todo => {
       this.todos.push(todo)
+    }, error => {
+      this.error = error;
     })
   }
 

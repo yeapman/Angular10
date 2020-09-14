@@ -7,3 +7,10 @@ input {
     border: 1px solid green;
   }
 }
+
+p {
+
+  &.error {
+    color: red
+  }
+}
