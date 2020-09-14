@@ -1,50 +1,15 @@
-<div class="myForm">
-
-  <form action="" [formGroup]="form" (ngSubmit)="submit()">
-
-    <input type="text" placeholder="Email" formControlName="email">
-    <div class="validation" *ngIf="form.get('email').invalid && form.get('email').touched">
-      <small *ngIf="form.get('email').errors.required">
-        can't be free
-      </small>
-
-      <small *ngIf="form.get('email').errors.email">
-        !!!enter email
-      </small>
-    </div>
-
-
-      <div class="card" formGroupName="adress">
-        <h1>Adress</h1>
-
-        <div class="form-control">
-          <select formControlName="country">
-            <option value="ru">Russia</option>
-            <option value="ua">Ukraine</option>
-            <option value="by">Belarus</option>
-          </select>
-        </div>
-
-        <input type="text" formControlName="city" >
-      </div>
-
-
-<!--    <div class="skills" formGroupName="skills">-->
-<!--      <button type="button" (click)="addSkill()">Добавить умения</button>-->
-
-<!--      <div class="nice" *ngFor="let control of form.get('skills').controls; let idx = index">-->
-<!--        <label >Skill: {{idx+1}}</label>-->
-
-<!--        <input type="text" [formControlName]="idx">-->
-<!--      </div>-->
-<!--    </div>-->
-
-
-    <input type="text" placeholder="Password" formControlName="password">
-
-    <button type="button" (click)="setCapital()">choose capital</button>
-
-
-    <button type="submit" [disabled]="form.invalid">Submit</button>
-  </form>
+<div class="not-loading" *ngIf="!loading; else loadingBlock" >
+  <div class="my" *ngFor="let todo of todos">
+    <span>{{todo.title}}</span>
+  </div>
+  <input type="text" placeholder="add" [(ngModel)]="toDoTitle">
+  <button (click)="addTodo()">check post</button>
 </div>
+
+<div class="loading">
+  <ng-template #loadingBlock>
+      <h1>Loading...</h1>
+  </ng-template>
+</div>
+
+
