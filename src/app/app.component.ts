@@ -49,7 +49,6 @@ export class AppComponent implements OnInit {
   addSkill() {
     const control = new FormControl('', Validators.required);
     // (<FormArray>this.form.get('skills')) - kastit'
-
     (this.form.get('skills') as FormArray).push(control)
   }
 

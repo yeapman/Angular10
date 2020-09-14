@@ -29,15 +29,15 @@
       </div>
 
 
-    <div class="skills" formGroupName="skills">
-      <button type="button" (click)="addSkill()">Добавить умения</button>
+<!--    <div class="skills" formGroupName="skills">-->
+<!--      <button type="button" (click)="addSkill()">Добавить умения</button>-->
 
-      <div class="nice" *ngFor="let control of form.get('skills').controls; let idx = index">
-        <label >Skill: {{idx+1}}</label>
+<!--      <div class="nice" *ngFor="let control of form.get('skills').controls; let idx = index">-->
+<!--        <label >Skill: {{idx+1}}</label>-->
 
-        <input type="text" [formControlName]="idx">
-      </div>
-    </div>
+<!--        <input type="text" [formControlName]="idx">-->
+<!--      </div>-->
+<!--    </div>-->
 
 
     <input type="text" placeholder="Password" formControlName="password">
