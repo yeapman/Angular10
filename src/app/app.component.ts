@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {delay} from 'rxjs/operators';
+import {TodoService} from './services/todos.service';
 
 export interface Todo {
   completed: boolean
@@ -21,7 +22,7 @@ export class AppComponent implements OnInit {
 
   toDoTitle = '';
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private service: TodoService) {
   }
 
 
@@ -48,12 +49,23 @@ export class AppComponent implements OnInit {
       title: this.toDoTitle,
       completed: false
     };
-    this.http.post<Todo>('https://jsonplaceholder.typicode.com/todos', newTodo)
-      .subscribe(todo => {
-        console.log('todo', todo)
-        this.todos.push(todo)
-      })
+
+    this.service.addTodo({
+      title: this.toDoTitle,
+      completed: false
+    }).subscribe(todo => {
+      this.todos.push(todo)
+    })
   }
+
+    removeTodo(id: number) {
+      this.http.delete<void>(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        .subscribe(resp => {
+            this.todos = this.todos.filter(t => t.id !== id )
+        })
+
+
+    }
 
 
 
