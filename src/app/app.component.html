@@ -1,19 +1,13 @@
-<div class="not-loading" *ngIf="!loading; else loadingBlock" >
-  <div class="my" *ngFor="let todo of todos">
-    <span>{{todo.title}}</span>
-  </div>
-  <input type="text" placeholder="add" [(ngModel)]="toDoTitle">
-  <button (click)="addTodo()">check post</button>
+<div class="">LALA</div>
 
-  <button (click)="removeTodo(101)">Remove post</button>
+<div class="routers">
+  <div routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"  class="about"[routerLink]="['/']">Home</div>
 
+  <div routerLinkActive="active" class="about"[routerLink]="['/about']">About</div>
+
+  <div routerLinkActive="active" class="posts" [routerLink]="['/posts']">Post</div>
 </div>
 
-<div class="loading">
-  <ng-template #loadingBlock>
-      <h1>Loading...</h1>
-  </ng-template>
-</div>
+<router-outlet></router-outlet>
 
 
-<p class="error">{{error}}</p>
