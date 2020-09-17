@@ -7,6 +7,7 @@ import {AppRoutingModule} from './app-routing.module';
 import { PostcComponent } from './postc/postc.component';
 import { HomeComponent } from './home/home.component';
 import { AboutExtraComponent } from './about-extra/about-extra.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { AboutExtraComponent } from './about-extra/about-extra.component';
     AboutComponent,
     PostcComponent,
     HomeComponent,
-    AboutExtraComponent
+    AboutExtraComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
