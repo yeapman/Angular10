@@ -6,6 +6,9 @@
   <div routerLinkActive="active" class="about"[routerLink]="['/about']">About</div>
 
   <div routerLinkActive="active" class="posts" [routerLink]="['/posts']">Post</div>
+
+  <button (click)="authen.login()">Login</button>
+  <button (click)="authen.logout()">Logout</button>
 </div>
 
 <router-outlet></router-outlet>
