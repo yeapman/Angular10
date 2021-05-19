@@ -14,7 +14,7 @@ export interface PostInterface {
 })
 export class AppComponent {
   posts: PostInterface[] = [
-    {title: 'Want learn angular components', text: 'still learn components', id: 1},
+    {title: 'Want learn angular components', text: 'LOOOOOL', id: 1},
     {title: ' LALA', text: 'lll', id: 2}
   ];
 
